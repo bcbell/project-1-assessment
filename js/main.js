@@ -1,24 +1,31 @@
-/*-----------Constants-----------*/
-const operators={
-    "+": (x, y) = {return x + y},
-    "-": (x, y)= {return x - y } 
-}
+
 /*-------------Variables------------*/
 
-let count = 0
+var count = 0
+
 /*------------Cached Element References-------*/
-let display = document.querySelector('numberDisplay')
-let number = document.getElementById('numberInput')
-let addingBtn = document.getElementById('plus')
-let subtractingBtn = document.getElementById('minus')
+let plusBtn= document.getElementById('plus')
+let minusBtn=document.getElementById('minus')
+let counter= document.querySelector('.numberDisplay')
+let inputValue = document.getElementById('numberInput')
 
-/*------------Event Listener--------*/
 
-addBtn.addEventListener('click',(evt)=>
- display.value = operators[evt.target.innerText](parseInt(number.value) + parseInt(display.value))
-)
+/*----------Function------------*/
+plusBtn.addEventListener('click',()=>{
+ 
+    counter.innerText=parseInt(inputValue.value) + parseInt(counter.innerText) 
+    
+})
 
-subtractingBtn.addEventListener('click', (evt)=>
-display.value = operators[evt.target.innerText](parseInt(number.value) - parseInt(display.value))
-)
+minusBtn.addEventListener('click',()=>{
+ 
+    counter.innerText= parseInt(counter.innerText)- parseInt(inputValue.value)
+    
+})
+
+
+
+
+
+
 
